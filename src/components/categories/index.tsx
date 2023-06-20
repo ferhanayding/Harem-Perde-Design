@@ -5,30 +5,33 @@ type Props = {};
 
 const Categories = (props: Props) => {
   return (
-    <div className=" flex p-4 flex-col justify-center items-center">
+    <div
+      id="categories"
+      className="flex md:p-4 md:pt-8 flex-col justify-center items-center"
+    >
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        transition={{ duration: 1 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        className="flex items-center justify-center flex-col"
+        initial={{ x: 100 }}
+        transition={{ duration: 0.7 }}
+        whileInView={{ x: 0 }}
+        className="flex items-center justify-center flex-col "
       >
         <h1
           className="text-3xl font-semibold text-center my-4 text-[#61561b] 
-        underline md:my-10 w-screen "
+        underline md:mt-10 md:mb-5  w-screen"
         >
           Kategoriler
         </h1>
-        <p className="text-lg text-center md:w-1/2  text-[#61561b] ">
+        <p className="text-lg text-center md:w-1/2 text-[#61561b]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
           eveniet facere aliquam itaque mollitia expedita rem illo enim nam
           quos.
         </p>
       </motion.div>
       <div className="flex flex-wrap gap-3 p-4 justify-center items-start">
-        {categories.map((category) => (
+        {categories.map((category, index) => (
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+            transition={{ duration: 0.5 }}
             whileInView={{ opacity: 1, x: 0 }}
             key={category.id}
             className="flex items-center cursor-pointer group flex-wrap

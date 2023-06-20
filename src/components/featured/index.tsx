@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ParallaxBanner } from "react-scroll-parallax";
-
+import { Link } from "react-scroll";
 type Props = {};
 
 const Featured = (props: Props) => {
@@ -34,12 +34,14 @@ const Featured = (props: Props) => {
               isterseniz, bizi tercih edebilirsiniz. 20+ yıllık deneyimli
               ekibimiz, size en uygun çözümleri sunmak için hazır bekliyor.
             </p>
-            <button
-              className="bg-textPrimary text-xs md:text-xl 
-             text-black px-4 py-2 rounded-md mt-6"
-            >
-              Kategorileri Gör
-            </button>
+            <Link to="categories" smooth={true} duration={500}>
+              <button
+                className="bg-textPrimary text-xs md:text-xl 
+            text-black px-4 py-2 rounded-md mt-6"
+              >
+                Kategorileri Gör
+              </button>
+            </Link>
             <hr className="hidden md:block  mt-8" />
           </motion.div>
         </div>

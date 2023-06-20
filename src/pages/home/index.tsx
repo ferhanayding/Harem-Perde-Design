@@ -1,5 +1,6 @@
 import Categories from "@/components/categories";
 import Featured from "@/components/featured";
+import MyWorks from "@/components/myWorks";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -11,6 +12,7 @@ export default function Home() {
     >
       <Featured />
       <Categories />
+      <MyWorks />
     </main>
   );
 }
