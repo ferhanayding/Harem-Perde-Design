@@ -18,6 +18,7 @@ module.exports = {
         primary: "#2C3E50",
         secondary: "#F39C12",
         textPrimary: "#e4e0c7",
+        textSecondary: "#61561b",
       },
     },
   },

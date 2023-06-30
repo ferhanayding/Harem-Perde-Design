@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../header";
 import Footer from "../footer";
+import SocialMedia from "../SocialMedia";
 
 type Props = {
   children: React.ReactNode;
@@ -8,8 +9,9 @@ type Props = {
 
 const Layout = (props: Props) => {
   return (
-    <main className="bg-primary">
+    <main className="bg-primary relative ">
       <Header />
+      <SocialMedia />
       <main>{props.children}</main>
       <Footer />
     </main>

@@ -1,3 +1,5 @@
+import About from "@/components/About";
+import Services from "@/components/Services";
 import Categories from "@/components/categories";
 import Featured from "@/components/featured";
 import MyWorks from "@/components/myWorks";
@@ -13,6 +15,8 @@ export default function Home() {
       <Featured />
       <Categories />
       <MyWorks />
+      <About />
+      <Services />
     </main>
   );
 }

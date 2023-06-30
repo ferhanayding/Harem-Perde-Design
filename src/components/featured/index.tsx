@@ -6,11 +6,14 @@ type Props = {};
 
 const Featured = (props: Props) => {
   return (
-    <div className="relative text-textPrimary max-w-[2000px] min-w-full overflow-hidden">
+    <div
+      id="home"
+      className="relative text-textPrimary max-w-[2000px] min-w-full overflow-hidden"
+    >
       <ParallaxBanner
         layers={[
           {
-            image: "/images/sagdan.jpeg",
+            image: "/images/gallery/sağdan.jpg",
             speed: -20,
           },
         ]}
@@ -21,6 +24,7 @@ const Featured = (props: Props) => {
         md:justify-start items-center justify-center  "
         >
           <motion.div
+            viewport={{ once: true }}
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -36,7 +40,7 @@ const Featured = (props: Props) => {
             </p>
             <Link to="categories" smooth={true} duration={500}>
               <button
-                className="bg-textPrimary text-xs md:text-xl 
+                className="bg-textPrimary text-xs md:text-base 
             text-black px-4 py-2 rounded-md mt-6"
               >
                 Kategorileri Gör

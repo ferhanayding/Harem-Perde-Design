@@ -1,6 +1,7 @@
 import { categories } from "@/dumyData/category";
 import React from "react";
 import { motion } from "framer-motion";
+import SectionTitle from "../sectionTitle";
 type Props = {};
 
 const Categories = (props: Props) => {
@@ -9,27 +10,24 @@ const Categories = (props: Props) => {
       id="categories"
       className="flex md:p-4 md:pt-8 flex-col justify-center items-center"
     >
-      <motion.div
-        initial={{ x: 100 }}
-        transition={{ duration: 0.7 }}
-        whileInView={{ x: 0 }}
-        className="flex items-center justify-center flex-col "
-      >
-        <h1
-          className="text-3xl font-semibold text-center my-4 text-[#61561b] 
-        underline md:mt-10 md:mb-5  w-screen"
+      <div className="flex items-center justify-center flex-col ">
+        <SectionTitle title="Kategoriler" />
+        <motion.p
+          viewport={{ once: true }}
+          initial={{ x: 100 }}
+          transition={{ duration: 0.7 }}
+          whileInView={{ x: 0 }}
+          className="text-lg text-center md:w-1/2 text-textSecondary"
         >
-          Kategoriler
-        </h1>
-        <p className="text-lg text-center md:w-1/2 text-[#61561b]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
           eveniet facere aliquam itaque mollitia expedita rem illo enim nam
           quos.
-        </p>
-      </motion.div>
+        </motion.p>
+      </div>
       <div className="flex flex-wrap gap-3 p-4 justify-center items-start">
         {categories.map((category, index) => (
           <motion.div
+            viewport={{ once: true }}
             initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
             transition={{ duration: 0.5 }}
             whileInView={{ opacity: 1, x: 0 }}
