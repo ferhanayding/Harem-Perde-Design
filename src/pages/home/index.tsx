@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main
-      className={`flex overflow-hidden  min-h-screen bg-textPrimary flex-col items-center justify-between  ${inter.className}`}
+      className={`flex overflow-hidden  min-h-screen  flex-col items-center justify-between  ${inter.className}`}
     >
       <Featured />
       <Categories />

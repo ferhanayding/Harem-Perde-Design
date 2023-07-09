@@ -29,7 +29,7 @@ const servicesSteps: Step[] = [
 ];
 const Services = (props: Props) => {
   return (
-    <div className="bg-primary text-textPrimary md:px-20 px-6 py-5 w-full">
+    <div className="bg-primary z-40  text-textPrimary md:px-20 h-full px-6 py-5 pb-24 w-full">
       <SectionTitle title="Services" color="textPrimary" />
 
       <div className="md:grid hidden gap-14">

@@ -5,7 +5,7 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div className="md:px-20 px-6 pb-10   w-full">
+    <div className="md:px-20 px-6 pb-10 z-40  bg-textPrimary w-full">
       <SectionTitle title="Hakkımızda" />
       <div className="flex  flex-col md:flex-row gap-8   md:pt-10 text-textSecondary ">
         <motion.div

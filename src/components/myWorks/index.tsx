@@ -7,7 +7,7 @@ type Props = {};
 
 const MyWorks = (props: Props) => {
   return (
-    <div className="w-full md:pb-14 min-h-screen md:px-20 px-6 bg-primary text-textPrimary">
+    <div className="w-full md:pb-14 z-40 min-h-screen md:px-20 px-6 bg-primary text-textPrimary">
       <div>
         <SectionTitle title="Galeri" color="textPrimary" />
         <motion.p

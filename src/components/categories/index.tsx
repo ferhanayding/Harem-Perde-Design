@@ -8,7 +8,7 @@ const Categories = (props: Props) => {
   return (
     <div
       id="categories"
-      className="flex md:p-4 md:pt-8 flex-col justify-center items-center"
+      className="flex md:p-4 md:pt-8 z-40 bg-textPrimary flex-col justify-center items-center"
     >
       <div className="flex items-center justify-center flex-col ">
         <SectionTitle title="Kategoriler" />

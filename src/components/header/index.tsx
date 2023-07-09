@@ -52,7 +52,7 @@ const Header: React.FC = (props: Props) => {
 
   return (
     <nav
-      className="w-screen font-medium fixed top-0 left-0 
+      className="w-screen font-medium shadow shadow-black fixed top-0 left-0 
   z-50 bg-primary text-textPrimary  h-16 py-2 md:px-10 px-4
      flex items-center justify-between"
     >
