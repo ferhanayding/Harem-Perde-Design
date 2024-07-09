@@ -2,9 +2,9 @@ import { categories } from "@/dumyData/category";
 import React from "react";
 import { motion } from "framer-motion";
 import SectionTitle from "../sectionTitle";
-type Props = {};
+// type Props = {};
 
-const Categories = (props: Props) => {
+const Categories = () => {
   return (
     <div
       id="categories"

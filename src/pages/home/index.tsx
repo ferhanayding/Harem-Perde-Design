@@ -1,6 +1,6 @@
 import About from "@/components/About";
 import Services from "@/components/Services";
-import Categories from "@/components/categories";
+// import Categories from "@/components/categories";
 import Featured from "@/components/featured";
 import MyWorks from "@/components/myWorks";
 import { Inter } from "next/font/google";
@@ -13,7 +13,7 @@ export default function Home() {
       className={`flex overflow-hidden  min-h-screen  flex-col items-center justify-between  ${inter.className}`}
     >
       <Featured />
-      <Categories />
+      {/* <Categories /> */}
       <MyWorks />
       <About />
       <Services />

@@ -12,19 +12,19 @@ export type HeaderItem = {
 };
 const HeaderItems: HeaderItem[] = [
   {
-    name: "Home",
+    name: "Anasayfa",
     link: "/home",
   },
   {
-    name: "About",
+    name: "Hakkımızda",
     link: "/about",
   },
   {
-    name: "Services",
+    name: "İşlerimiz",
     link: "/services",
   },
   {
-    name: "Categories",
+    name: "Kategoriler",
     link: "/categories",
   },
 ];
@@ -81,7 +81,7 @@ const Header: React.FC = (props: Props) => {
               <li
                 className={`${
                   pathname === item.link ? "underline" : ""
-                } text-[18px] hover:underline`}
+                } text-[16px] hover:underline`}
               >
                 {item?.name}
               </li>
