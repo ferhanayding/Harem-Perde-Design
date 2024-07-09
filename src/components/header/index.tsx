@@ -13,7 +13,7 @@ export type HeaderItem = {
 const HeaderItems: HeaderItem[] = [
   {
     name: "Anasayfa",
-    link: "/home",
+    link: "/",
   },
   {
     name: "Hakkımızda",
