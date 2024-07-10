@@ -16,8 +16,8 @@ const HamburgerMenuList = (props: Props) => {
       whileInView={{ x: 0, opacity: 1 }}
       viewport={{ once: true }}
       transition={{ x: -100, opacity: 1, duration: 1 }}
-      className="absolute top-[47px]  left-[-14px]  py-3 px-9 
- border rounded-lg border-transparent text-textPrimary  bg-[#00000033]"
+      className="absolute top-[47px]  left-[-16px]  py-2 px-9 
+ border  border-transparent text-textPrimary  bg-primary bg-opacity-80"
     >
       <ul className="flex flex-col gap-4">
         {props.headerItems.map((item, index) => (

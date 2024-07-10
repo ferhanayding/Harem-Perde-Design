@@ -5,7 +5,11 @@ type Props = {
   color?: string;
 };
 
-const SectionTitle = ({ title, color = "textSecondary" }: Props) => {
+const SectionTitle = ({
+  title,
+  color = "textSecondary",
+}: // underline = true,
+Props) => {
   return (
     <motion.h1
       viewport={{ once: true }}

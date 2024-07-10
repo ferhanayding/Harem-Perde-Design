@@ -3,6 +3,7 @@ import Services from "@/components/Services";
 // import Categories from "@/components/categories";
 import Featured from "@/components/featured";
 import MyWorks from "@/components/myWorks";
+import Info from "@/components/workscompanies";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,6 +16,7 @@ export default function Home() {
       <Featured />
       {/* <Categories /> */}
       <MyWorks />
+      <Info />
       <About />
       <Services />
     </main>

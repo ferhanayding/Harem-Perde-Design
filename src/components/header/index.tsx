@@ -58,7 +58,11 @@ const Header: React.FC = (props: Props) => {
     >
       <div className="flex flex-1 justify-start items-center">
         <div className="hidden md:flex flex-1 justify-start items-center">
-          Logo
+          <img
+            src="logo/textlogo.png"
+            alt=""
+            className=" w-32 object-contain "
+          />
         </div>
         {/* mobile hamburger menu */}
         <div className="md:hidden flex relative" ref={hamburgerRef}>
@@ -73,7 +77,10 @@ const Header: React.FC = (props: Props) => {
         </div>
       </div>
       {/* mobile logo */}
-      <div className="md:hidden flex ">Logo</div>
+      <div className="md:hidden flex ">
+        {" "}
+        <img src="logo/textlogo.png" alt="" className=" w-32 object-contain " />
+      </div>
       <div className="hidden md:flex flex-[3]  justify-end items-center">
         <ul className="flex items-center gap-14 lg:gap-20">
           {HeaderItems.map((item, index) => (
