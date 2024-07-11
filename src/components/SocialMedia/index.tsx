@@ -1,6 +1,8 @@
 import React from "react";
 import Instagram from "../icons/Instagram";
 import Whatsapp from "../icons/Whatsapp";
+import { FaMapMarkerAlt } from "react-icons/fa";
+
 import Link from "next/link";
 type Props = {};
 const SocialMedias = [
@@ -17,7 +19,7 @@ const SocialMedias = [
   {
     name: "Map",
     link: "https://www.google.com/maps/place/40%C2%B022'11.5%22N+49%C2%B049'00.0%22E/@40.3698611,49.8140918,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.3698611!4d49.8166667?entry=ttu",
-    icon: <Whatsapp width={20} height={20} />,
+    icon: <FaMapMarkerAlt size={20} />,
   },
 ];
 const SocialMedia = (props: Props) => {
