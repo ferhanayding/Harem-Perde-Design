@@ -14,6 +14,11 @@ const SocialMedias = [
     link: "https://api.whatsapp.com/send/?phone=994505606173&text&type=phone_number&app_absent=0",
     icon: <Whatsapp width={20} height={20} />,
   },
+  {
+    name: "Map",
+    link: "https://www.google.com/maps/place/40%C2%B022'11.5%22N+49%C2%B049'00.0%22E/@40.3698611,49.8140918,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.3698611!4d49.8166667?entry=ttu",
+    icon: <Whatsapp width={20} height={20} />,
+  },
 ];
 const SocialMedia = (props: Props) => {
   return (

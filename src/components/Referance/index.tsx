@@ -9,7 +9,7 @@ const Refarance = (props: Props) => {
   return (
     <div
       id="refarance"
-      className="bg-bgPrimary z-40  text-textPrimary md:px-20 h-full px-6 py-5 pb-24 w-full"
+      className="bg-bgPrimary z-40 relative  text-textPrimary md:px-20 h-full px-6 py-5 pb-24 w-full"
     >
       <SectionTitle title="Referanslarımız" color="textSecondary" />
       <div className="md:mt-16 ">
@@ -54,6 +54,8 @@ const Refarance = (props: Props) => {
           </div>
         ))}
       </div>
+      <div className="absolute bottom-0 left-0 w-[52%] h-2 bg-primary z-40 rotate-1 "></div>
+      <div className="absolute bottom-0 right-0 w-[52%] h-2 bg-primary z-40 -rotate-1 "></div>
     </div>
   );
 };
