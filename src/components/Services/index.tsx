@@ -1,36 +1,36 @@
 import React from "react";
 import SectionTitle from "../sectionTitle";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 type Props = {};
 type Step = {
   id: number;
   title: string;
 };
-const servicesSteps: Step[] = [
-  {
-    id: 1,
-    title: "Müşterilerimiz Mağazamıza Gelip Beğendikleri Parçaları Seçer.",
-  },
-  {
-    id: 2,
-    title:
-      "Müşterilerimiz Evinden Ölçü alınır. Beğendiği Parçalarla Evin Uyumuna Bakılır.",
-  },
-  {
-    id: 3,
-    title:
-      "Sipariş Verilir. Gelen Parçalar Atölyemizde İşlenir. Müşterilerimiz İstediği Şekilde Tasarlanır.",
-  },
-  {
-    id: 4,
-    title:
-      "Atölyemizde işlenen Parçalar Müşterimizle uygun bir gün belirlenerek Asılır.",
-  },
-];
+
 const Services = (props: Props) => {
+  const { t } = useTranslation("global");
+  const servicesSteps: Step[] = [
+    {
+      id: 1,
+      title: t("hdw1"),
+    },
+    {
+      id: 2,
+      title: t("hdw2"),
+    },
+    {
+      id: 3,
+      title: t("hwd3"),
+    },
+    {
+      id: 4,
+      title: t("hdw4"),
+    },
+  ];
   return (
     <div className="bg-primary z-40 relative  text-textPrimary md:px-20 h-full px-6 py-5 pb-24 w-full">
-      <SectionTitle title="Nasıl Çalışıyoruz?" color="textPrimary" />
+      <SectionTitle title={t("howDoWork")} color="textPrimary" />
 
       <div className="md:grid hidden gap-14">
         {servicesSteps.map((step, index) => (

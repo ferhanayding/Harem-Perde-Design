@@ -65,4 +65,34 @@ export const worksData = [
       },
     ],
   },
+  {
+    workName: "Özel Mülk | Baku",
+    photos: [
+      {
+        width: 100,
+        height: 50,
+        src: "/works/work3/gallery1.jpeg",
+        original: "/works/work3/gallery1.jpeg",
+      },
+
+      {
+        width: 200,
+        height: 100,
+        src: "/works/work3/gallery3.jpeg",
+        original: "/works/work3/gallery3.jpeg",
+      },
+      {
+        width: 200,
+        height: 100,
+        src: "/works/work3/gallery4.jpeg",
+        original: "/works/work3/gallery4.jpeg",
+      },
+      {
+        width: 200,
+        height: 100,
+        src: "/works/work3/gallery9.jpeg",
+        original: "/works/work3/gallery9.jpeg",
+      },
+    ],
+  },
 ];

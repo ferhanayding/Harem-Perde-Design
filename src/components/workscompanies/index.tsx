@@ -4,6 +4,7 @@ import info from "../../dumyData/companies";
 import Head from "next/head";
 import Slider from "react-slick";
 import SectionTitle from "../sectionTitle";
+import { useTranslation } from "react-i18next";
 
 const Info = () => {
   const settings = {
@@ -37,12 +38,13 @@ const Info = () => {
       },
     ],
   };
+  const { t } = useTranslation("global");
 
   return (
     <>
       <div className="w-screen md:px-20 px-6 bg-bgPrimary relative z-40 ">
         <div className="text-textPrimary  font-normal text-center text-xl">
-          <SectionTitle title="Güçlü Ortaklıklarımızla Geleceğe...." />
+          <SectionTitle title={t("employees") + "..."} />
 
           <div className="  my-10  ">
             <Slider className="  flex justify-center gap-6   " {...settings}>

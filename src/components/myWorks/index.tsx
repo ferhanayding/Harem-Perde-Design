@@ -3,13 +3,19 @@ import { Gallery } from "react-grid-gallery";
 import { motion } from "framer-motion";
 import { curtains } from "./data";
 import SectionTitle from "../sectionTitle";
+import { useTranslation } from "react-i18next";
 type Props = {};
 
 const MyWorks = (props: Props) => {
+  const { t } = useTranslation("global");
+
   return (
-    <div className="w-full md:pb-14 pb-10 z-40 min-h-screen md:px-20 px-6 relative bg-primary text-textPrimary">
+    <div
+      id="products"
+      className="w-full md:pb-14 pb-10 z-40 min-h-screen md:px-20 px-6 relative bg-primary text-textPrimary"
+    >
       <div>
-        <SectionTitle title="Galeri" color="textPrimary" />
+        <SectionTitle title={t("products")} color="textPrimary" />
         <motion.p
           viewport={{ once: true }}
           initial={{ opacity: 0, y: 100 }}
@@ -17,12 +23,7 @@ const MyWorks = (props: Props) => {
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-10 text-center w-full"
         >
-          Evinizin ruhunu yansıtan, şıklığı ve zarafeti bir araya getiren perde
-          çözümlerimizle tanışın. Her biri özenle seçilmiş fotoğraflarımızda,
-          yaşam alanlarınızı güzelleştirecek tasarımlarımızı keşfedin. Modern
-          dokunuşlar, klasik çizgiler ve daha fazlasıyla her zevke hitap eden
-          geniş ürün yelpazemiz sizleri bekliyor. İlham almak ve hayalinizdeki
-          perdeyi bulmak için galerimize göz atın.
+          {t("productsDesc")}
         </motion.p>
       </div>
       <motion.div
@@ -35,7 +36,7 @@ const MyWorks = (props: Props) => {
         <Gallery
           images={curtains}
           enableImageSelection={false}
-          rowHeight={500}
+          rowHeight={300}
         />
       </motion.div>
       <div className="md:hidden">

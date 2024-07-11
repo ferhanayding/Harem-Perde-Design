@@ -2,9 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 // import { ParallaxBanner } from "react-scroll-parallax";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 type Props = {};
 
 const Featured = (props: Props) => {
+  const { t } = useTranslation("global");
+
   return (
     <div
       id="home"
@@ -33,16 +36,14 @@ const Featured = (props: Props) => {
             Harem Perde & Design
           </h1>
           <p className="text-base sm:text-xl md:text-2xl lg:text-3xl mt-4">
-            Siz de evinize veya iş yerinize şıklık ve işlevsellik katmak
-            isterseniz, bizi tercih edebilirsiniz. 20+ yıllık deneyimli
-            ekibimiz, size en uygun çözümleri sunmak için hazır bekliyor.
+            {t("featuredDesc")}
           </p>
           <Link to="refarance" smooth={true} duration={500}>
             <button
               className="bg-textPrimary text-xs md:text-base 
             text-black px-4 py-2 rounded-md mt-6"
             >
-              Referanslarımızı İnceleyin
+              {t("referenceButton")}
             </button>
           </Link>
           <hr className="hidden md:block  mt-8" />

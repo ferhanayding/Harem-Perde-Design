@@ -3,21 +3,23 @@ import SectionTitle from "../sectionTitle";
 import { worksData } from "./data";
 import { Gallery } from "react-grid-gallery";
 import { motion } from "framer-motion";
-type Props = {};
+import { useTranslation } from "react-i18next";
 
-const Refarance = (props: Props) => {
+const Refarance = () => {
+  const { t } = useTranslation("global");
+
   return (
     <div
       id="refarance"
-      className="bg-bgPrimary z-40 relative  text-textPrimary md:px-20 h-full px-6 py-5 pb-24 w-full"
+      className="bg-bgPrimary z-40 relative   text-textPrimary md:px-20 h-full px-6 py-5 pb-24 w-full"
     >
-      <SectionTitle title="Referanslarımız" color="textSecondary" />
+      <SectionTitle title={t("references")} color="textSecondary" />
       <div className="md:mt-16 ">
         {worksData.map((work, index) => (
-          <div key={index}>
+          <div key={index} className="relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <span className=" p-4 text-textSecondary font-semibold md:text-xl ">
-                {work.workName}{" "}
+              <span className=" p-4 text-textSecondary font-semibold md:text-2xl ">
+                {work.workName}
               </span>
             </div>
             <motion.div
@@ -51,6 +53,9 @@ const Refarance = (props: Props) => {
                 </motion.div>
               ))}
             </div>
+            {worksData.length - 1 === index ? null : (
+              <hr className=" my-5 md:my-10 border-t-2 border-primary" />
+            )}
           </div>
         ))}
       </div>

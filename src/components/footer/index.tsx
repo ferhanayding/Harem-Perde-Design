@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation("global");
+
   return (
     <div className="bg-gray-900 relative text-white py-10">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-20">
@@ -21,7 +24,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400">
-        <p>© 2005 AYTEKS MMC. Tüm hakları saklıdır.</p>
+        <p>{t("footer")} </p>
       </div>
     </div>
   );
