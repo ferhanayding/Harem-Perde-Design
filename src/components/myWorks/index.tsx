@@ -7,7 +7,7 @@ type Props = {};
 
 const MyWorks = (props: Props) => {
   return (
-    <div className="w-full md:pb-14 z-40 min-h-screen md:px-20 px-6 bg-primary text-textPrimary">
+    <div className="w-full md:pb-14 z-40 min-h-screen md:px-20 px-6 relative bg-primary text-textPrimary">
       <div>
         <SectionTitle title="Galeri" color="textPrimary" />
         <motion.p
@@ -17,9 +17,12 @@ const MyWorks = (props: Props) => {
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-10 text-center w-full"
         >
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est,
-          perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Harum, deleniti!
+          Evinizin ruhunu yansıtan, şıklığı ve zarafeti bir araya getiren perde
+          çözümlerimizle tanışın. Her biri özenle seçilmiş fotoğraflarımızda,
+          yaşam alanlarınızı güzelleştirecek tasarımlarımızı keşfedin. Modern
+          dokunuşlar, klasik çizgiler ve daha fazlasıyla her zevke hitap eden
+          geniş ürün yelpazemiz sizleri bekliyor. İlham almak ve hayalinizdeki
+          perdeyi bulmak için galerimize göz atın.
         </motion.p>
       </div>
       <motion.div
@@ -53,6 +56,9 @@ const MyWorks = (props: Props) => {
           </motion.div>
         ))}
       </div>
+      <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-slate-50 z-40"></div>
+      <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-slate-50 z-40 rotate-1 "></div>
+      <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-slate-50 z-40 -rotate-1 "></div>
     </div>
   );
 };

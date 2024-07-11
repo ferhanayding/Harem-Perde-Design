@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 import { HeaderItem } from "..";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { Link as ScrollLink } from "react-scroll";
+
 type Props = {
   headerItems: HeaderItem[];
+  setHamburgerMenu: (value: boolean) => void;
 };
 
 const HamburgerMenuList = (props: Props) => {
@@ -21,15 +24,18 @@ const HamburgerMenuList = (props: Props) => {
     >
       <ul className="flex flex-col gap-4">
         {props.headerItems.map((item, index) => (
-          <Link key={index} href={item?.link}>
-            <li
-              className={`${
-                pathname === item.link ? "underline" : ""
-              } text-[18px] hover:underline list-disc `}
-            >
-              {item?.name}
-            </li>
-          </Link>
+          <ScrollLink
+            key={index}
+            to={item.link}
+            onClick={() => props.setHamburgerMenu(false)}
+            smooth={true}
+            duration={600}
+            className={`${
+              pathname === item.link ? "underline" : ""
+            } text-[15px] hover:underline`}
+          >
+            {item?.name}
+          </ScrollLink>
         ))}
       </ul>
     </motion.div>

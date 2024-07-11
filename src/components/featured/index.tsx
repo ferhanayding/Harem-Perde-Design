@@ -15,9 +15,9 @@ const Featured = (props: Props) => {
         className="fixed h-screen  w-screen object-cover"
         alt=""
       />
-      <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-primary z-40"></div>
-      <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-primary z-40 rotate-1 "></div>
-      <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-primary z-40 -rotate-1 "></div>
+      <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-bgPrimary z-40"></div>
+      <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-bgPrimary z-40 rotate-1 "></div>
+      <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-bgPrimary z-40 -rotate-1 "></div>
       <div
         className="absolute inset-0 bg-black bg-opacity-20  flex md:items-end 
         md:justify-start items-center justify-center  "

@@ -12,7 +12,7 @@ const Info = () => {
     arrows: false,
     infinite: true,
 
-    slidesToShow: 3,
+    slidesToShow: 3.5,
     autoplay: true,
     slidesToScroll: 1,
     cssEase: "linear",
@@ -40,26 +40,20 @@ const Info = () => {
 
   return (
     <>
-      <div className="w-screen md:px-20 px-6 bg-primary relative z-40 p">
+      <div className="w-screen md:px-20 px-6 bg-slate-50 relative z-40 ">
         <div className="text-textPrimary  font-normal text-center text-xl">
-          <SectionTitle
-            title="Güçlü Ortaklıklarımızla Geleceğe...."
-            color={"textPrimary"}
-          />
+          <SectionTitle title="Güçlü Ortaklıklarımızla Geleceğe...." />
 
-          <div className=" h-50 my-10  ">
-            <Slider
-              className="h-50  flex justify-center gap-6   "
-              {...settings}
-            >
+          <div className="  my-10  ">
+            <Slider className="  flex justify-center gap-6   " {...settings}>
               {info.map((item, index) => (
                 <div
-                  className=" max-w-[40px] flex justify-center items-center my-auto pointer-events-none  "
+                  className="  flex justify-center items-center my-auto pointer-events-none  "
                   key={index}
                 >
                   <img
                     src={item.url}
-                    className="md:max-w-xl md:max-h-12 max-h-10 max-w-10  "
+                    className="md:max-w-xl md:max-h-12 max-h-10 max-w-10 mr-11  "
                     alt="photo"
                     key={index}
                   />
@@ -68,6 +62,9 @@ const Info = () => {
             </Slider>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-bgPrimary z-40"></div>
+        <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-bgPrimary z-40 rotate-1 "></div>
+        <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-bgPrimary z-40 -rotate-1 "></div>
       </div>
     </>
   );

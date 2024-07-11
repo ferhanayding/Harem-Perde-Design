@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import HamburgerMenu from "../icons/HamburgerMenu";
 import { motion } from "framer-motion";
 import HamburgerMenuList from "./hamburgerMenu";
+import { Link as ScrollLink } from "react-scroll";
 
 type Props = {};
 export type HeaderItem = {
@@ -13,20 +14,20 @@ export type HeaderItem = {
 const HeaderItems: HeaderItem[] = [
   {
     name: "Anasayfa",
-    link: "/",
+    link: "home",
   },
   {
     name: "Hakkımızda",
-    link: "/about",
+    link: "about",
   },
   {
-    name: "İşlerimiz",
-    link: "/services",
+    name: "Referanslarımız",
+    link: "refarance",
   },
-  {
-    name: "Kategoriler",
-    link: "/categories",
-  },
+  // {
+  //   name: "Kategoriler",
+  //   link: "/categories",
+  // },
 ];
 const Header: React.FC = (props: Props) => {
   const { pathname } = useRouter();
@@ -58,11 +59,18 @@ const Header: React.FC = (props: Props) => {
     >
       <div className="flex flex-1 justify-start items-center">
         <div className="hidden md:flex flex-1 justify-start items-center">
-          <img
-            src="logo/textlogo.png"
-            alt=""
-            className=" w-32 object-contain "
-          />
+          <ScrollLink
+            to={"home"}
+            smooth={true}
+            duration={600}
+            className="cursor-pointer"
+          >
+            <img
+              src="logo/textlogo.png"
+              alt=""
+              className=" w-32 object-contain "
+            />
+          </ScrollLink>
         </div>
         {/* mobile hamburger menu */}
         <div className="md:hidden flex relative" ref={hamburgerRef}>
@@ -73,26 +81,32 @@ const Header: React.FC = (props: Props) => {
               className="fill-textPrimary"
             />
           </button>
-          {hamburgerMenu && <HamburgerMenuList headerItems={HeaderItems} />}
+          {hamburgerMenu && (
+            <HamburgerMenuList
+              setHamburgerMenu={setHamburgerMenu}
+              headerItems={HeaderItems}
+            />
+          )}
         </div>
       </div>
       {/* mobile logo */}
       <div className="md:hidden flex ">
-        {" "}
         <img src="logo/textlogo.png" alt="" className=" w-32 object-contain " />
       </div>
       <div className="hidden md:flex flex-[3]  justify-end items-center">
         <ul className="flex items-center gap-14 lg:gap-20">
           {HeaderItems.map((item, index) => (
-            <Link key={index} href={item?.link}>
-              <li
-                className={`${
-                  pathname === item.link ? "underline" : ""
-                } text-[16px] hover:underline`}
-              >
-                {item?.name}
-              </li>
-            </Link>
+            <ScrollLink
+              key={index}
+              to={item.link}
+              smooth={true}
+              duration={600}
+              className={`${
+                pathname === item.link ? "underline" : ""
+              } text-[15px] hover:underline cursor-pointer `}
+            >
+              {item?.name}
+            </ScrollLink>
           ))}
         </ul>
       </div>

@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Refarance from "@/components/Referance";
 import Services from "@/components/Services";
 // import Categories from "@/components/categories";
 import Featured from "@/components/featured";
@@ -14,6 +15,7 @@ export default function Home() {
       className={`flex overflow-hidden  min-h-screen  flex-col items-center justify-between  ${inter.className}`}
     >
       <Featured />
+      <Refarance />
       {/* <Categories /> */}
       <MyWorks />
       <Info />

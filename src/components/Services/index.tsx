@@ -29,8 +29,8 @@ const servicesSteps: Step[] = [
 ];
 const Services = (props: Props) => {
   return (
-    <div className="bg-primary z-40  text-textPrimary md:px-20 h-full px-6 py-5 pb-24 w-full">
-      <SectionTitle title="Services" color="textPrimary" />
+    <div className="bg-primary z-40 relative  text-textPrimary md:px-20 h-full px-6 py-5 pb-24 w-full">
+      <SectionTitle title="Nasıl Çalışıyoruz?" color="textPrimary" />
 
       <div className="md:grid hidden gap-14">
         {servicesSteps.map((step, index) => (
@@ -75,6 +75,9 @@ const Services = (props: Props) => {
           </motion.div>
         ))}
       </div>
+      <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-gray-900 z-40"></div>
+      <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-gray-900 z-40 rotate-1 "></div>
+      <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-gray-900 z-40 -rotate-1 "></div>
     </div>
   );
 };

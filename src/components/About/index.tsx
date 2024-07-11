@@ -5,7 +5,7 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div className="md:px-20 px-6 pb-10 z-40  bg-textPrimary w-full">
+    <div id="about" className="md:px-20 px-6 pb-10 z-40  bg-bgPrimary w-full">
       <SectionTitle title="Hakkımızda" />
       <div className="flex  flex-col md:flex-row gap-8   md:pt-10 text-textSecondary ">
         <motion.div
@@ -28,7 +28,7 @@ const About = (props: Props) => {
           whileInView={{ opacity: 1, x: 0 }}
           className="flex-1 font-medium  md:text-xl text-base md:my-auto text-center md:text-left leading-9   "
         >
-          2004 yılından beri, kaliteli ve şık perde çözümleri sunarak yaşam
+          2005 yılından beri, kaliteli ve şık perde çözümleri sunarak yaşam
           alanlarınızı güzelleştirmeyi hedefliyoruz. Uzun yıllara dayanan
           deneyimimiz ve tutkulu ekibimizle birlikte, müşterilerimize en iyi
           ürünleri ve hizmetleri sunmaktan gurur duyuyoruz.

@@ -1,6 +1,12 @@
 export const curtains = [
   {
-    width: 350,
+    width: 300,
+    height: 300,
+    src: "/images/gallery/work88.jpeg",
+    original: "/images/gallery/work88.jpeg",
+  },
+  {
+    width: 250,
     height: 150,
     src: "images/gallery/gallery1.jpeg",
     original: "images/gallery/gallery1.jpeg",
@@ -35,18 +41,7 @@ export const curtains = [
     src: "images/gallery/gallery6.jpeg",
     original: "images/gallery/gallery6.jpeg",
   },
-  {
-    width: 200,
-    height: 150,
-    src: "images/gallery/gallery7.jpeg",
-    original: "images/gallery/gallery7.jpeg",
-  },
-  {
-    width: 250,
-    height: 150,
-    src: "images/gallery/gallery8.jpeg",
-    original: "images/gallery/gallery8.jpeg",
-  },
+
   {
     width: 150,
     height: 150,
@@ -54,15 +49,51 @@ export const curtains = [
     original: "images/gallery/gallery9.jpeg",
   },
   {
-    width: 220,
+    width: 200,
     height: 150,
     src: "images/gallery/gallery10.jpeg",
     original: "images/gallery/gallery10.jpeg",
   },
   {
-    width: 220,
-    height: 150,
-    src: "images/gallery/gallery11.jpeg",
-    original: "images/gallery/gallery11.jpeg",
+    width: 250,
+    height: 200,
+    src: "/images/gallery/work11.jpeg",
+    original: "/images/gallery/work11.jpeg",
+  },
+  {
+    width: 250,
+    height: 200,
+    src: "/images/gallery/work22.jpeg",
+    original: "/images/gallery/work22.jpeg",
+  },
+  {
+    width: 250,
+    height: 200,
+    src: "/images/gallery/work33.jpeg",
+    original: "/images/gallery/work33.jpeg",
+  },
+  {
+    width: 250,
+    height: 200,
+    src: "/images/gallery/work44.jpeg",
+    original: "/images/gallery/work44.jpeg",
+  },
+  {
+    width: 250,
+    height: 200,
+    src: "/images/gallery/work55.jpeg",
+    original: "/images/gallery/work55.jpeg",
+  },
+  {
+    width: 250,
+    height: 200,
+    src: "/images/gallery/work66.jpeg",
+    original: "/images/gallery/work66.jpeg",
+  },
+  {
+    width: 250,
+    height: 200,
+    src: "/images/gallery/work77.jpeg",
+    original: "/images/gallery/work77.jpeg",
   },
 ];
