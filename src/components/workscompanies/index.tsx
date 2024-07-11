@@ -40,7 +40,7 @@ const Info = () => {
 
   return (
     <>
-      <div className="w-screen md:px-20 px-6 bg-slate-50 relative z-40 ">
+      <div className="w-screen md:px-20 px-6 bg-bgPrimary relative z-40 ">
         <div className="text-textPrimary  font-normal text-center text-xl">
           <SectionTitle title="Güçlü Ortaklıklarımızla Geleceğe...." />
 
@@ -62,9 +62,9 @@ const Info = () => {
             </Slider>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-bgPrimary z-40"></div>
-        <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-bgPrimary z-40 rotate-1 "></div>
-        <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-bgPrimary z-40 -rotate-1 "></div>
+        <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-primary z-40"></div>
+        <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-primary z-40 rotate-1 "></div>
+        <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-primary z-40 -rotate-1 "></div>
       </div>
     </>
   );

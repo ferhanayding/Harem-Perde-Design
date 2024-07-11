@@ -37,12 +37,12 @@ const Featured = (props: Props) => {
             isterseniz, bizi tercih edebilirsiniz. 20+ yıllık deneyimli
             ekibimiz, size en uygun çözümleri sunmak için hazır bekliyor.
           </p>
-          <Link to="categories" smooth={true} duration={500}>
+          <Link to="refarance" smooth={true} duration={500}>
             <button
               className="bg-textPrimary text-xs md:text-base 
             text-black px-4 py-2 rounded-md mt-6"
             >
-              Kategorileri Gör
+              Referanslarımızı İnceleyin
             </button>
           </Link>
           <hr className="hidden md:block  mt-8" />

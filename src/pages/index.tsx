@@ -16,10 +16,11 @@ export default function Home() {
     >
       <Featured />
       <Refarance />
+      <About />
       {/* <Categories /> */}
       <MyWorks />
       <Info />
-      <About />
+
       <Services />
     </main>
   );

@@ -91,7 +91,18 @@ const Header: React.FC = (props: Props) => {
       </div>
       {/* mobile logo */}
       <div className="md:hidden flex ">
-        <img src="logo/textlogo.png" alt="" className=" w-32 object-contain " />
+        <ScrollLink
+          to={"home"}
+          smooth={true}
+          duration={600}
+          className="cursor-pointer"
+        >
+          <img
+            src="logo/textlogo.png"
+            alt=""
+            className=" w-32 object-contain "
+          />
+        </ScrollLink>
       </div>
       <div className="hidden md:flex flex-[3]  justify-end items-center">
         <ul className="flex items-center gap-14 lg:gap-20">

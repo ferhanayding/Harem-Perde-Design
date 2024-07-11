@@ -7,7 +7,7 @@ type Props = {};
 
 const MyWorks = (props: Props) => {
   return (
-    <div className="w-full md:pb-14 z-40 min-h-screen md:px-20 px-6 relative bg-primary text-textPrimary">
+    <div className="w-full md:pb-14 pb-10 z-40 min-h-screen md:px-20 px-6 relative bg-primary text-textPrimary">
       <div>
         <SectionTitle title="Galeri" color="textPrimary" />
         <motion.p
@@ -56,9 +56,9 @@ const MyWorks = (props: Props) => {
           </motion.div>
         ))}
       </div>
-      <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-slate-50 z-40"></div>
-      <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-slate-50 z-40 rotate-1 "></div>
-      <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-slate-50 z-40 -rotate-1 "></div>
+      <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-bgPrimary z-40"></div>
+      <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-bgPrimary z-40 rotate-1 "></div>
+      <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-bgPrimary z-40 -rotate-1 "></div>
     </div>
   );
 };
