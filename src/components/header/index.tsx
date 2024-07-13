@@ -138,9 +138,9 @@ const Header: React.FC = (props: Props) => {
             value={selectedLanguage}
             defaultValue={selectedLanguage}
             onChange={handleLanguageChange}
-            className="appearance-none bg-primary text-textPrimary border  w-24 text-sm font-medium
+            className="appearance-none bg-primary text-textPrimary border    md:w-24  font-medium
             border-textPrimary rounded-md py-[6px] pl-3 pr-10 focus:outline-none focus:ring-1
-             focus:ring-bgPrimary transition duration-300 ease-in-out  "
+             focus:ring-bgPrimary transition duration-300 ease-in-out  text-xs "
           >
             <option value="tr">TR</option>
             <option value="ru">RU</option>

@@ -18,7 +18,7 @@ const Refarance = () => {
         {worksData.map((work, index) => (
           <div key={index} className="relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <span className=" p-4 text-textSecondary font-semibold md:text-2xl ">
+              <span className=" p-4 text-textSecondary font-semibold text-sm  md:text-2xl ">
                 {work.workName}
               </span>
             </div>

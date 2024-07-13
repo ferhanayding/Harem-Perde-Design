@@ -4,7 +4,6 @@ import globalEn from "./locales/en/global.json";
 import globalTr from "./locales/tr/global.json";
 import globalRu from "./locales/ru/global.json";
 import globalAz from "./locales/az/global.json";
-import { getLanguage } from "@/utils/i18n";
 const resources = {
   en: {
     global: globalEn,

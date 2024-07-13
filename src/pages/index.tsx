@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 // import Categories from "@/components/categories";
 import Featured from "@/components/featured";
 import MyWorks from "@/components/myWorks";
+import ReferencesList from "@/components/referencesList";
 import Info from "@/components/workscompanies";
 import { Inter } from "next/font/google";
 
@@ -20,8 +21,9 @@ export default function Home() {
       <About />
       {/* <Categories /> */}
       <MyWorks />
-      <Info />
+      {/* <Info /> */}
 
+      <ReferencesList />
       <Services />
     </main>
   );
