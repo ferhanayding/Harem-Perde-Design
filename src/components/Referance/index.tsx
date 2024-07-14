@@ -59,8 +59,9 @@ const Refarance = () => {
           </div>
         ))}
       </div>
-      <div className="absolute bottom-0 left-0 w-[52%] h-2 bg-primary z-40 rotate-1 "></div>
-      <div className="absolute bottom-0 right-0 w-[52%] h-2 bg-primary z-40 -rotate-1 "></div>
+      <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-primary z-40"></div>
+      <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-primary z-40 rotate-1 "></div>
+      <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-primary z-40 -rotate-1 "></div>
     </div>
   );
 };

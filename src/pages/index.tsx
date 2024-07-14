@@ -18,12 +18,12 @@ export default function Home() {
       <Featured />
       <Refarance />
 
+      <ReferencesList />
       <About />
       {/* <Categories /> */}
       <MyWorks />
       {/* <Info /> */}
 
-      <ReferencesList />
       <Services />
     </main>
   );

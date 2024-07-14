@@ -29,8 +29,8 @@ const Services = (props: Props) => {
     },
   ];
   return (
-    <div className="bg-primary z-40 relative  text-textPrimary md:px-20 h-full px-6 py-5 pb-24 w-full">
-      <SectionTitle title={t("howDoWork")} color="textPrimary" />
+    <div className="bg-bgPrimary z-40 relative  text-textSecondary md:px-20 h-full px-6 py-5 pb-24 w-full">
+      <SectionTitle title={t("howDoWork")} color="textSecondary" />
 
       <div className="md:grid hidden gap-14">
         {servicesSteps.map((step, index) => (
@@ -40,17 +40,17 @@ const Services = (props: Props) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             key={step.id}
-            className="border-b-2  border-textPrimary w-3/5 
+            className="border-b-2  border-textSecondary w-3/5 
                 pb-4 flex gap-2 items-center md:m-0 "
             style={{ marginLeft: step.id % 2 === 0 ? "auto" : "0" }}
           >
             <div
-              className=" border-2  border-textPrimary flex items-center justify-center
+              className=" border-2  border-textSecondary flex items-center justify-center
               rounded-full min-w-[40px] min-h-[40px]"
             >
-              <span className="text-lg font-semibold">{step.id}</span>
+              <span className="text-lg font-bold">{step.id}</span>
             </div>
-            <p>{step.title}</p>
+            <p className="md:text-lg md:font-bold">{step.title}</p>
           </motion.div>
         ))}
       </div>
@@ -62,11 +62,11 @@ const Services = (props: Props) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             key={step.id}
-            className="border-b-2  border-textPrimary w-full 
+            className="border-b-2  border-textSecondary w-full 
                 pb-4 flex gap-5 flex-col items-center md:m-0 "
           >
             <div
-              className=" border-2  border-textPrimary flex items-center justify-center
+              className=" border-2  border-textSecondary flex items-center justify-center
               rounded-full min-w-[40px] min-h-[40px]"
             >
               <span className="text-lg font-semibold">{step.id}</span>

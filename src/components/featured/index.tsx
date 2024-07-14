@@ -33,7 +33,7 @@ const Featured = (props: Props) => {
           className="p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 max-w-4xl md:text-left text-center"
         >
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">
-            Harem Perde & Design
+            Harem Pərdə & Design
           </h1>
           <p className="text-base sm:text-xl md:text-2xl lg:text-3xl mt-4">
             {t("featuredDesc")}
