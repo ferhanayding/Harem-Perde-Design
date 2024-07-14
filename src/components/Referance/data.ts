@@ -111,6 +111,12 @@ export const worksData = [
         original: "/works/work2/mariana11.png",
       },
       {
+        width: 200,
+        height: 150,
+        src: "/works/work2/mariana13.png",
+        original: "/works/work2/mariana13.png",
+      },
+      {
         width: 220,
         height: 150,
         src: "/works/work2/mariana2.webp",
