@@ -158,12 +158,12 @@ export const worksData = [
         src: "/works/work2/mariana10.webp",
         original: "/works/work2/mariana10.webp",
       },
-      {
-        width: 220,
-        height: 150,
-        src: "/works/work2/mariana11.webp",
-        original: "/works/work2/mariana11.webp",
-      },
+      // {
+      //   width: 220,
+      //   height: 150,
+      //   src: "/works/work2/mariana11.webp",
+      //   original: "/works/work2/mariana11.webp",
+      // },
       {
         width: 140,
         height: 150,
