@@ -1,10 +1,11 @@
 import React from "react";
 import Instagram from "../icons/Instagram";
 import Whatsapp from "../icons/Whatsapp";
-import { FaMapMarkerAlt } from "react-icons/fa";
-
+import { FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import Link from "next/link";
+
 type Props = {};
+
 const SocialMedias = [
   {
     name: "Instagram",
@@ -21,16 +22,22 @@ const SocialMedias = [
     link: "https://www.google.com/maps/place/40%C2%B022'11.5%22N+49%C2%B049'00.0%22E/@40.3698611,49.8140918,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.3698611!4d49.8166667?entry=ttu",
     icon: <FaMapMarkerAlt size={20} />,
   },
+  {
+    name: "Phone",
+    link: "tel:+994505606173",
+    icon: <FaPhone size={16} />,
+  },
 ];
+
 const SocialMedia = (props: Props) => {
   return (
-    <div className=" fixed grid gap-3 top-1/2 right-0 text-white bg-black px-2 py-5 rounded-l-2xl z-[50] ">
+    <div className="fixed grid gap-3 top-1/2 right-0 text-white bg-black px-2 py-5 rounded-l-2xl z-[50]">
       {SocialMedias.map((socialMedia) => (
         <Link
           key={socialMedia.name}
-          className="hover:scale-105 transition-all duration-150 "
+          className="hover:scale-105 transition-all duration-150"
           href={socialMedia.link}
-          target="_blank"
+          target={socialMedia.name !== "Phone" ? "_blank" : "_self"}
         >
           {socialMedia.icon}
         </Link>
