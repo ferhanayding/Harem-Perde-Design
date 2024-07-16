@@ -13,7 +13,7 @@ export default function ReferencesList() {
         "Azerbaycan Respublikası Daxili İşlər nazirliyi, Çevik Polis Alayı",
         "İmişli İcra Hakimiyyəti",
         "Azerbaycan Respublikası Kənd Təsərrufatı nazirliyi",
-        "Səbail rayon prokuraturası",
+        "Səbail rayon Prokurorluğu",
         "Gürcüstan Respublikası Dmanisi Heydər Əliyev Muzeyi",
         "Tacikistan Azərbaycan Səfirliyi",
         "Salyan Prokurorluğu",
