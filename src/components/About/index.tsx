@@ -18,7 +18,7 @@ const About = () => {
           className="flex gap-5 font-semibold flex-1 text-2xl"
         >
           <img
-            src="/images/gallery/sağdan.jpg"
+            src="/images/gallery/sağdan.jpeg"
             className="w-full h-full object-cover rounded-lg"
             alt=""
           />

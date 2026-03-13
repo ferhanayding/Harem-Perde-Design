@@ -17,10 +17,9 @@ const Footer = () => {
         </div>
         <div className="text-start">
           <p className="text-lg mb-2">
-            H. Cavid prospekti, 528. Mehelle, Politexnik Universiteti ile üz be
-            üz.
+            Akademik Həsən Əliyev küçəsi, 26 Bakü, Azerbaycan
           </p>
-          <p className="text-lg">Tel: 012 5107439 / 050 5606173</p>
+          <p className="text-lg">050 5606173</p>
         </div>
       </div>
       <div className="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400">
