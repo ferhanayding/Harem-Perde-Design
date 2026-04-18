@@ -85,7 +85,7 @@ export default function ReferencesList() {
         "Bagçalı Saray",
         "DİN Xezri hotel &istirahət mərkəzi Bilgəh",
         "Mariana Trench otel/restaurant & spa",
-        "AĞALI HOTEL | Zengilan",
+
         "Baku White City Residence",
 
       ],
