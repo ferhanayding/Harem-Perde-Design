@@ -75,7 +75,7 @@ export default function ReferencesList() {
     {
       category: t("referencescat3"),
       items: [
-        "Meysari Mountain Hotel",
+        "Meysari Grand Hotel & Spa",
         "AĞALI HOTEL | ZENGİLAN",
         "Park Yasamal COP 29 layihəsi",
         "Reddison Hotel | Norway",
