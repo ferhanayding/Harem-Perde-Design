@@ -5,22 +5,28 @@ export const worksData = [
 
     photos: [
       {
-        width: 200,
+        width: 300,
         height: 150,
         src: "/works/meysari.webp",
         original: "/works/meysari.webp",
       },
       {
-        width: 200,
+        width: 300,
         height: 150,
         src: "/works/meyseri2.webp",
         original: "/works/meyseri2.webp",
       },
       {
-        width: 200,
+        width: 290,
         height: 150,
         src: "/works/meyseri3.webp",
         original: "/works/meyseri3.webp",
+      },
+      {
+        width: 210,
+        height: 150,
+        src: "/works/meyseri4.webp",
+        original: "/works/meyseri4.webp",
       },
 
 
