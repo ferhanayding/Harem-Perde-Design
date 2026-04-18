@@ -75,14 +75,19 @@ export default function ReferencesList() {
     {
       category: t("referencescat3"),
       items: [
-        "Mariana Trench otel/restaurant & spa",
+        "Meysari Mountain Hotel",
+        "AĞALI HOTEL | ZENGİLAN",
+        "Park Yasamal COP 29 layihəsi",
+        "Reddison Hotel | Norway",
+        "CHENOT PALACE GABALA | ViLLAS",
         "Dad House Lənkəran",
         "Dad House residence Lənkəran",
-        "DİN Xezri hotel &istirahət mərkəzi Bilgəh",
         "Bagçalı Saray",
+        "DİN Xezri hotel &istirahət mərkəzi Bilgəh",
+        "Mariana Trench otel/restaurant & spa",
         "AĞALI HOTEL | Zengilan",
         "Baku White City Residence",
-        "Reddison Hotel | Norway",
+
       ],
     },
 

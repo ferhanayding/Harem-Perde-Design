@@ -1,4 +1,31 @@
 export const worksData = [
+
+  {
+    workName: "Meysari Mountain Hotel",
+
+    photos: [
+      {
+        width: 200,
+        height: 150,
+        src: "/works/meysari.webp",
+        original: "/works/meysari.webp",
+      },
+      {
+        width: 200,
+        height: 150,
+        src: "/works/meyseri2.webp",
+        original: "/works/meyseri2.webp",
+      },
+      {
+        width: 200,
+        height: 150,
+        src: "/works/meyseri3.webp",
+        original: "/works/meyseri3.webp",
+      },
+
+
+    ]
+  },
   {
     workName: "AĞALI HOTEL | ZENGİLAN",
 
@@ -95,6 +122,7 @@ export const worksData = [
   //     },
   //   ],
   // },
+
   {
     workName: "Mariana Trench Otel/Restaurant & Spa | Sumgayıt",
     photos: [

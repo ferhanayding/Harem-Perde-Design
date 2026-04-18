@@ -1,169 +1,98 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { useEffect, useRef, useState } from "react";
-import HamburgerMenu from "../icons/HamburgerMenu";
-import { motion } from "framer-motion";
-import HamburgerMenuList from "./hamburgerMenu";
+import { useState, useRef, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { useTranslation } from "react-i18next";
+import HamburgerMenuList from "./hamburgerMenu";
+import HamburgerMenu from "../icons/HamburgerMenu";
+const Header = () => {
+  const { t, i18n } = useTranslation("global");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const [lang, setLang] = useState("az");
 
-type Props = {};
-export type HeaderItem = {
-  name: string;
-  link: string;
-};
-
-const Header: React.FC = (props: Props) => {
-  const { pathname } = useRouter();
-  const [hamburgerMenu, setHamburgerMenu] = useState<boolean>(false);
-  const hamburgerRef = useRef<HTMLDivElement>(null);
-  const [selectedLanguage, setSelectedLanguage] = useState("az");
-  const { i18n } = useTranslation();
-  const { t } = useTranslation("global");
-
-  const handleLanguageChange = (e: any) => {
-    setSelectedLanguage(e.target.value);
-    localStorage.setItem("language", e.target.value);
-    i18n.changeLanguage(e.target.value);
-  };
-  const HeaderItems: HeaderItem[] = [
-    {
-      name: t("home"),
-      link: "home",
-    },
-    {
-      name: t("about"),
-      link: "about",
-    },
-    {
-      name: t("references"),
-      link: "refarance",
-    },
-    {
-      name: t("products"),
-      link: "products",
-    },
+  const items = [
+    { name: t("home"), link: "home" },
+    { name: t("about"), link: "about" },
+    { name: t("references"), link: "refarance" },
+    { name: t("products"), link: "products" },
   ];
+
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        hamburgerRef.current &&
-        !hamburgerRef.current.contains(event.target as Node)
-      ) {
-        setHamburgerMenu(false);
+    const close = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
       }
     };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    document.addEventListener("mousedown", close);
+    return () => document.removeEventListener("mousedown", close);
   }, []);
 
+  const changeLang = (e: any) => {
+    setLang(e.target.value);
+    i18n.changeLanguage(e.target.value);
+  };
+
   return (
-    <nav
-      className="w-screen font-medium shadow shadow-black fixed top-0 left-0 
-  z-50 bg-primary text-textPrimary  h-16 py-2 md:px-10 px-4
-     flex items-center justify-between"
-    >
-      <div className="flex flex-1 justify-start items-center">
-        <div className="hidden md:flex flex-1 justify-start items-center">
-          <ScrollLink
-            to={"home"}
-            smooth={true}
-            duration={600}
-            className="cursor-pointer"
-          >
-            <img
-              src="logo/textlogo.png"
-              alt=""
-              className=" w-32 object-contain "
-            />
-          </ScrollLink>
-        </div>
-        {/* mobile hamburger menu */}
-        <div className="md:hidden flex relative" ref={hamburgerRef}>
-          <button onClick={() => setHamburgerMenu(!hamburgerMenu)}>
-            <HamburgerMenu
-              height={30}
-              width={30}
-              className="fill-textPrimary"
-            />
-          </button>
-          {hamburgerMenu && (
-            <HamburgerMenuList
-              setHamburgerMenu={setHamburgerMenu}
-              headerItems={HeaderItems}
-            />
-          )}
-        </div>
-      </div>
-      {/* mobile logo */}
-      <div className="md:hidden flex ">
-        <ScrollLink
-          to={"home"}
-          smooth={true}
-          duration={600}
-          className="cursor-pointer"
-        >
-          <img
-            src="logo/textlogo.png"
-            alt=""
-            className=" w-32 object-contain "
-          />
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#E4E0C7]/80 backdrop-blur-md border-b border-[#d6d1b5]">
+
+      <div className="max-w-[1400px] mx-auto flex items-center justify-between px-4 md:px-10 h-16">
+
+        {/* LOGO */}
+        <ScrollLink to="home" smooth duration={600}>
+          <img src="/logo/textlogo.png" className="w-28 cursor-pointer" />
         </ScrollLink>
-      </div>
-      <div className="hidden md:flex flex-[3]  justify-end items-center">
-        <ul className="flex items-center gap-14 lg:gap-20">
-          {HeaderItems.map((item, index) => (
+
+        {/* MENU */}
+        <ul className="hidden md:flex gap-10 text-sm tracking-wide text-[#181818] font-medium">
+          {items.map((item, i) => (
             <ScrollLink
-              key={index}
+              key={i}
               to={item.link}
-              smooth={true}
+              smooth
               duration={600}
-              className={`${
-                pathname === item.link ? "underline" : ""
-              } text-[13px] hover:underline cursor-pointer `}
+              className="cursor-pointer hover:text-black transition duration-300"
             >
-              {item?.name}
+              {item.name}
             </ScrollLink>
           ))}
         </ul>
-      </div>
-      <div className="flex flex-1 justify-end items-center">
-        <div className="relative">
+
+        {/* RIGHT */}
+        <div className="flex items-center gap-4">
+
+          {/* LANGUAGE */}
           <select
-            id="language"
-            value={selectedLanguage}
-            defaultValue={selectedLanguage}
-            onChange={handleLanguageChange}
-            className="appearance-none bg-primary text-textPrimary border    md:w-24  font-medium
-            border-textPrimary rounded-md py-[6px] pl-3 pr-10 focus:outline-none focus:ring-1
-             focus:ring-bgPrimary transition duration-300 ease-in-out  text-xs "
+            value={lang}
+            onChange={changeLang}
+            className="bg-transparent border border-[#cfc9ab] rounded-md px-3 py-1 text-xs text-[#3a3a3a]"
           >
             <option value="tr">TR</option>
-            <option value="ru">RU</option>
             <option value="en">EN</option>
+            <option value="ru">RU</option>
             <option value="az">AZ</option>
           </select>
-          <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-            <svg
-              className="w-4 h-4 text-textPrimary"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 9l-7 7-7-7"
-              ></path>
-            </svg>
+
+          {/* CTA */}
+          <ScrollLink to="refarance" smooth duration={600}>
+            <button className="hidden md:block bg-black text-white text-xs px-4 py-2 rounded-md hover:bg-[#333] transition">
+              {t("referenceButton")}
+            </button>
+          </ScrollLink>
+
+          {/* MOBILE */}
+          <div className="md:hidden relative" ref={menuRef}>
+            <button onClick={() => setMenuOpen(!menuOpen)}>
+              <HamburgerMenu className="w-6 h-6 fill-[#3a3a3a]" />
+            </button>
+
+            {menuOpen && (
+              <HamburgerMenuList
+                setHamburgerMenu={setMenuOpen}
+                headerItems={items}
+              />
+            )}
           </div>
         </div>
+
       </div>
     </nav>
   );

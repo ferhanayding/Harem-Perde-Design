@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-// import { ParallaxBanner } from "react-scroll-parallax";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
+
 type Props = {};
 
 const Featured = (props: Props) => {
@@ -11,19 +11,45 @@ const Featured = (props: Props) => {
   return (
     <div
       id="home"
-      className="relative bg-primary text-textPrimary h-screen max-w-[2000px] min-w-full "
+      className="relative bg-primary text-textPrimary h-screen max-w-[2000px] min-w-full overflow-hidden"
     >
-      <img
-        src="/images/gallery/featured.png"
-        className="fixed h-screen   w-screen object-fill   "
-        alt=""
+      {/* DESKTOP VIDEO */}
+      <video
+        className="hidden md:block fixed top-0 left-0 w-screen h-screen object-cover"
+        src="/videos/haremsite1.1.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
       />
+
+      {/* MOBILE VIDEO */}
+      <video
+        className="block md:hidden fixed top-0 left-0 w-screen h-screen object-cover"
+        src="/videos/haremsite1-mobile.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <video
+        className="block md:hidden fixed top-0 left-0 w-screen h-screen object-cover"
+        src="/videos/haremsite1.1dikey.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+      />
+      {/* ALT DEKOR */}
       <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-bgPrimary z-40"></div>
-      <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-bgPrimary z-40 rotate-1 "></div>
-      <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-bgPrimary z-40 -rotate-1 "></div>
+      <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-bgPrimary z-40 rotate-1"></div>
+      <div className="absolute bottom-0 right-0 w-[52%] h-5 bg-bgPrimary z-40 -rotate-1"></div>
+
+      {/* DARK OVERLAY */}
       <div
-        className="absolute inset-0 bg-black bg-opacity-50  flex md:items-end 
-        md:justify-start items-center justify-center  "
+        className="absolute inset-0 bg-black bg-opacity-50 flex md:items-end 
+        md:justify-start items-center justify-center"
       >
         <motion.div
           viewport={{ once: true }}
@@ -35,18 +61,21 @@ const Featured = (props: Props) => {
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">
             Harem Pərdə & Design
           </h1>
+
           <p className="text-base sm:text-xl md:text-2xl lg:text-3xl mt-4">
             {t("featuredDesc")}
           </p>
+
           <Link to="refarance" smooth={true} duration={500}>
             <button
               className="bg-textPrimary text-xs md:text-base 
-            text-black px-4 py-2 rounded-md mt-6"
+              text-black px-4 py-2 rounded-md mt-6"
             >
               {t("referenceButton")}
             </button>
           </Link>
-          <hr className="hidden md:block  mt-8" />
+
+          <hr className="hidden md:block mt-8" />
         </motion.div>
       </div>
     </div>
