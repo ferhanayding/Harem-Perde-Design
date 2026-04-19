@@ -1,7 +1,7 @@
 export const worksData = [
 
   {
-    workName: "Meysari Grand Hotel & Spa",
+    workName:  "MEYSARI GRAND HOTEL & SPA | ŞAMAXI",
 
     photos: [
       {

@@ -63,7 +63,7 @@ export default function ReferencesList() {
         "Qazax Ədəbiyyat Muzeyi",
         "Qazax Yeni Azərbaycan Partiyası İnzibati Binası",
         "Qazax Gənclər Mərkəzi",
-        "Sumgayıt şəhəri kimyaçı mədəniyyət sarayı",
+        "Sumqayıt Şəhəri kimyaçı Mədeniyyət Sarayı",
         "Sabirabad Gənclər Mərkəzi",
         "Şəki Olimpiya Kompleksi",
         "Göygöl Gənclər Mərkəzi",
@@ -75,18 +75,17 @@ export default function ReferencesList() {
     {
       category: t("referencescat3"),
       items: [
-        "Meysari Grand Hotel & Spa",
+        "MEYSARI GRAND HOTEL & SPA | ŞAMAXI ",
         "AĞALI HOTEL | ZENGİLAN",
         "Park Yasamal COP 29 layihəsi",
         "Reddison Hotel | Norway",
+        "Bagçalı Saray",
         "CHENOT PALACE GABALA | ViLLAS",
         "Dad House Lənkəran",
         "Dad House residence Lənkəran",
-        "Bagçalı Saray",
         "DİN Xezri hotel &istirahət mərkəzi Bilgəh",
         "Mariana Trench otel/restaurant & spa",
-
-        "Baku White City Residence",
+        "Baku White City Residence"
 
       ],
     },
