@@ -12,7 +12,7 @@ const MyWorks = (props: Props) => {
   return (
     <div
       id="products"
-      className="w-full md:pb-14 pb-10 z-40 min-h-screen md:px-20 px-6 relative bg-primary text-textPrimary"
+      className="w-full pattern-soft-dark md:pb-14 pb-10 z-40 min-h-screen md:px-20 px-6 relative bg-primary text-textPrimary"
     >
       <div>
         <SectionTitle title={t("products")} color="textPrimary" />

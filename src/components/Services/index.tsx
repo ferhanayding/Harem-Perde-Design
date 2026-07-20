@@ -29,7 +29,7 @@ const Services = (props: Props) => {
     },
   ];
   return (
-    <div className="bg-bgPrimary z-40 relative  text-textSecondary md:px-20 h-full px-6 py-5 pb-24 w-full">
+    <div className="bg-bgPrimary z-40 relative  pattern-soft text-textSecondary md:px-20 h-full px-6 py-5 pb-24 w-full">
       <SectionTitle title={t("howDoWork")} color="textSecondary" />
 
       <div className="md:grid hidden gap-14">

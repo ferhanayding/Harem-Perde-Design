@@ -76,6 +76,7 @@ export default function ReferencesList() {
       category: t("referencescat3"),
       items: [
         "MEYSARI GRAND HOTEL & SPA | ŞAMAXI ",
+        "FAIRMONT HOTEL | BAKU",
         "AĞALI HOTEL | ZENGİLAN",
         "Park Yasamal COP 29 layihəsi",
         "Reddison Hotel | Norway",
@@ -101,7 +102,7 @@ export default function ReferencesList() {
     },
   ];
   return (
-    <div className="w-full md:pb-14 pb-10 text-textPrimary z-40 min-h-screen md:px-20 px-6 relative bg-primary">
+    <div className="w-full md:pb-14 pb-10 pattern-soft-dark text-textPrimary z-40 min-h-screen md:px-20 px-6 relative bg-primary">
       <Head>
         <meta
           name="description"

@@ -7,7 +7,7 @@ const About = () => {
   const { t } = useTranslation("global");
 
   return (
-    <div id="about" className="md:px-20 px-6 pb-10 z-40 bg-bgPrimary w-full">
+    <div id="about" className=" pattern-soft md:px-20 px-6 pb-10 z-40 bg-bgPrimary w-full">
       <SectionTitle title={t("about")} />
       <div className="flex flex-col md:flex-row gap-8 md:pt-10 text-textSecondary">
         <motion.div

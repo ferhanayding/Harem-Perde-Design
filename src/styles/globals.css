@@ -4,6 +4,63 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+:root {
+  color-scheme: light;
+}
+
+.pattern-soft {
+  background-color: #fdfcf8;
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+    repeating-linear-gradient(45deg, transparent 0 20px, rgba(0, 0, 0, 0.015) 20px 22px),
+    repeating-linear-gradient(-45deg, transparent 0 20px, rgba(0, 0, 0, 0.012) 20px 22px);
+  background-size: 40px 40px, 40px 40px, 80px 80px, 80px 80px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  position: relative;
+}
+
+.pattern-soft::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.018) 1px, transparent 1px),
+    linear-gradient(225deg, rgba(0, 0, 0, 0.014) 1px, transparent 1px);
+  background-size: 140px 140px;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0.9;
+}
+.pattern-soft-dark {
+  background-color: #0F172A;
+  background-image:
+    linear-gradient(90deg, rgba(243, 243, 243, 0.035) 2px, transparent 4px),
+    linear-gradient(0deg, rgba(255, 253, 253, 0.025) 2px, transparent 4px),
+    repeating-linear-gradient(45deg, transparent 0 20px, rgba(255, 255, 255, 0.015) 20px 22px),
+    repeating-linear-gradient(-45deg, transparent 0 20px, rgba(226, 226, 226, 0.012) 20px 22px);
+  background-size: 40px 40px, 40px 40px, 80px 80px, 80px 80px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  position: relative;
+}
+
+.pattern-soft-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.018) 2px, transparent 4px),
+    linear-gradient(225deg, rgba(254, 254, 254, 0.014) 2px, transparent 4px);
+  background-size: 140px 140px;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
 .ReactGridGallery_tile {
   @apply 
   lg:mx-0 

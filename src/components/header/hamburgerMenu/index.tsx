@@ -1,48 +1,59 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { Link as ScrollLink } from "react-scroll";
+
+type HeaderItem = {
+  name: string;
+  link: string;
+};
 
 type Props = {
-  headerItems: any[];
+  headerItems: HeaderItem[];
   setHamburgerMenu: (value: boolean) => void;
 };
 
 const HamburgerMenuList = (props: Props) => {
   const { pathname } = useRouter();
 
+  const handleItemClick = (link: string) => {
+    props.setHamburgerMenu(false);
+
+    requestAnimationFrame(() => {
+      const section = document.getElementById(link);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 50 }}
-      transition={{ duration: 0.3 }}
-      className="absolute right-[-20px] top-[46px] w-64 h-screen 
-      shadow-2xl bg-[#E4E0C7]/95 backdrop-blur-md 
-      border border-[#d6d1b5] z-50
-      rounded-bl-2xl rounded-tl-2xl rounded-tr-none"
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.25 }}
+      className="absolute left-[-20px] top-[51px] w-64 overflow-hidden  border border-black/10 
+      bg-white shadow-2xl z-50"
     >
-      <ul className="flex flex-col py-6">
-        {props.headerItems.map((item, index) => (
-          <React.Fragment key={index}>
-            <ScrollLink
-              to={item.link}
-              onClick={() => props.setHamburgerMenu(false)}
-              smooth={true}
-              duration={600}
-              className={`px-6 py-4 text-base font-semibold tracking-wide cursor-pointer transition
-                ${pathname === item.link
-                  ? "text-black"
-                  : "text-[#3a3a3a]"
-                }
-                hover:bg-black hover:text-white`}
-            >
-              {item?.name}
-            </ScrollLink>
+      <ul className="flex flex-col">
+        {props.headerItems?.map((item, index) => (
+          <React.Fragment key={`${item.link}-${index}`}>
+            <li>
+              <button
+                type="button"
+                onClick={() => handleItemClick(item.link)}
+                className={`flex w-full items-center justify-between px-5 py-4 text-left 
+                  text-sm font-semibold tracking-wide transition ${pathname === item.link ? "text-black bg-primary" : "text-black/80 hover:bg-black/5 hover:text-black"}`}
+              >
+                <span>{item?.name || item.link}</span>
+                <span className="text-base text-black/40">›</span>
+              </button>
+            </li>
 
-            {/* Divider */}
             {index !== props.headerItems.length - 1 && (
-              <div className="mx-6 h-[1px] bg-[#d6d1b5] opacity-70"></div>
+              <div className="mx-4 h-[1px] bg-black/10"></div>
             )}
           </React.Fragment>
         ))}

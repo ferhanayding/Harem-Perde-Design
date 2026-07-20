@@ -11,7 +11,7 @@ const Refarance = () => {
   return (
     <div
       id="refarance"
-      className="bg-bgPrimary z-40 relative   text-textPrimary md:px-20 h-full px-6 py-5 pb-24 w-full"
+      className="bg-bgPrimary z-40 relative pattern-soft   text-textPrimary md:px-20 h-full px-6 py-5 pb-24 w-full"
     >
       <SectionTitle title={t("references")} color="textSecondary" />
       <div className="md:mt-16 ">

@@ -1,9 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+import { Link as ScrollLinkBase } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
 type Props = {};
+
+const ScrollLink = ScrollLinkBase as unknown as React.ComponentType<{
+  to: string;
+  smooth?: boolean;
+  duration?: number;
+  className?: string;
+  children?: React.ReactNode;
+}>;
 
 const Featured = (props: Props) => {
   const { t } = useTranslation("global");
@@ -11,7 +19,7 @@ const Featured = (props: Props) => {
   return (
     <div
       id="home"
-      className="relative bg-primary text-textPrimary h-screen max-w-[2000px] min-w-full overflow-hidden"
+      className="relative pattern-soft  text-textPrimary h-screen max-w-[2000px] min-w-full overflow-hidden"
     >
       {/* DESKTOP VIDEO */}
       <video
@@ -66,14 +74,14 @@ const Featured = (props: Props) => {
             {t("featuredDesc")}
           </p>
 
-          <Link to="refarance" smooth={true} duration={500}>
+          <ScrollLink to="refarance" smooth={true} duration={500}>
             <button
               className="bg-textPrimary text-xs md:text-base 
               text-black px-4 py-2 rounded-md mt-6"
             >
               {t("referenceButton")}
             </button>
-          </Link>
+          </ScrollLink>
 
           <hr className="hidden md:block mt-8" />
         </motion.div>
