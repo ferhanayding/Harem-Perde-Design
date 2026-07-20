@@ -44,7 +44,7 @@ const HamburgerMenuList = (props: Props) => {
               <button
                 type="button"
                 onClick={() => handleItemClick(item.link)}
-                className={`flex w-full items-center justify-between px-5 py-4 text-left 
+                className={`flex w-full pattern-soft items-center justify-between px-5 py-4 text-left 
                   text-sm font-semibold tracking-wide transition ${pathname === item.link ? "text-black bg-primary" : "text-black/80 hover:bg-black/5 hover:text-black"}`}
               >
                 <span>{item?.name || item.link}</span>

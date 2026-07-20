@@ -33,11 +33,7 @@ const SocialMedia = () => {
       link: "https://api.whatsapp.com/send/?phone=994505606173&text&type=phone_number&app_absent=0",
       icon: <Whatsapp width={20} height={20} />,
     },
-    {
-      name: "Map",
-      link: mapLink,
-      icon: <FaMapMarkerAlt size={20} />,
-    },
+
     {
       name: "Phone",
       link: "tel:+994505606173",
