@@ -7,20 +7,25 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-linear-header":
-          "linear-gradient(0deg, rgba(0,0,0,0.16299019607843135) 0%, rgba(0,0,0,0.8688725490196079) 26%, rgba(0,0,0,0.8800770308123249) 57%)",
-
-        "gradient-linear-works":
-          "linear-gradient(0deg, rgba(44,62,80,0.9389005602240896) 44%, rgba(44,62,80,0.7932422969187676) 53%, rgba(44,62,80,0.6811974789915967) 60%, rgba(228,224,199,0.5243347338935574) 76%, rgba(255,255,255,0.7960434173669468) 93%)",
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
+      boxShadow: {
+        glow: "0 20px 80px rgba(8, 15, 35, 0.18)",
       },
       colors: {
-        primary: "#0F172A",
-        secondary: "#F39C12",
-        bgPrimary: "#FDFCF8",
-        textPrimary: "#F5DF98",
-        // textPrimary: "#e4e0c7",
+        primary: "#050816",
+        surface: "#0c1220",
+        accent: "#7c3aed",
+        accentSoft: "#8b5cf6",
+        muted: "#94a3b8",
+        bgPrimary: "#f8fafc",
+        textPrimary: "#e2e8f0",
         textSecondary: "#61561b",
+      },
+      backgroundImage: {
+        "hero-overlay":
+          "linear-gradient(180deg, rgba(6, 11, 28, 0.78) 0%, rgba(6, 11, 28, 0.92) 100%)",
       },
     },
   },

@@ -9,10 +9,10 @@ type Props = {
 
 const Layout = (props: Props) => {
   return (
-    <main className="bg-primary relative overflow-x-hidden ">
+    <main className="min-h-screen bg-primary text-textPrimary relative overflow-x-hidden">
       <Header />
       <SocialMedia />
-      <section>{props.children}</section>
+      <section className="relative pt-16">{props.children}</section>
       <Footer />
     </main>
   );

@@ -59,6 +59,7 @@ export default function ReferencesList() {
     {
       category: t("referencescat2"),
       items: [
+        "Daşkəsən rayonu Prezident iqamətgahı",
         "Qazax Uşaq Əyləncə Mərkəzi",
         "Qazax Ədəbiyyat Muzeyi",
         "Qazax Yeni Azərbaycan Partiyası İnzibati Binası",

@@ -82,7 +82,7 @@ const Header: React.FC = () => {
     <nav
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-500 backdrop-blur-md text-black h-16 py-2 md:px-10 px-4 flex items-center justify-between ${isScrolled
         ? "bg-bgPrimary shadow-md border-b border-black/5"
-        : "bg-white/90 border-b border-transparent shadow-none "
+        : "bg-bgPrimary border-b border-transparent shadow-none "
         }`}
     >
       {/* SOL KISIM: Mobil Hamburger Menü & Masaüstü Logo */}

@@ -35,7 +35,7 @@ const HamburgerMenuList = (props: Props) => {
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.25 }}
       className="absolute left-[-20px] top-[51px] w-64 overflow-hidden  border border-black/10 
-      bg-white shadow-2xl z-50"
+      bg-bgPrimary shadow-2xl z-50"
     >
       <ul className="flex flex-col">
         {props.headerItems?.map((item, index) => (
