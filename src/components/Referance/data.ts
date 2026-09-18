@@ -1,23 +1,29 @@
 export const worksData = [
 
   {
-    workName:  "MEYSARI GRAND HOTEL & SPA | ŞAMAXI",
+    workName: "MEYSARI GRAND HOTEL & SPA | ŞAMAXI",
 
     photos: [
       {
-        width: 300,
+        width: 200,
         height: 150,
-        src: "/works/meysari.webp",
-        original: "/works/meysari.webp",
+        src: "https://youtu.be/uHq-dzFwOdg?si=3moQX4Rhpo3FQdSt",
+        original: "https://youtu.be/uHq-dzFwOdg?si=3moQX4Rhpo3FQdSt",
       },
       {
-        width: 300,
+        width: 110,
+        height: 250,
+        src: "/works/meyseri5.jpeg",
+        original: "/works/meyseri5.jpeg",
+      },
+      {
+        width: 200,
         height: 150,
         src: "/works/meyseri2.webp",
         original: "/works/meyseri2.webp",
       },
       {
-        width: 290,
+        width: 190,
         height: 150,
         src: "/works/meyseri3.webp",
         original: "/works/meyseri3.webp",
@@ -29,7 +35,37 @@ export const worksData = [
         original: "/works/meyseri4.webp",
       },
 
+      {
+        width: 110,
+        height: 150,
+        src: "/works/meyseri6.webp",
+        original: "/works/meyseri6.webp",
+      },
+      {
+        width: 110,
+        height: 150,
+        src: "/works/meyseri7.webp",
+        original: "/works/meyseri7.webp",
+      },
+      {
+        width: 110,
+        height: 150,
+        src: "/works/meyseri8.webp",
+        original: "/works/meyseri8.webp",
+      },
+      {
+        width: 110,
+        height: 150,
+        src: "/works/meyseri9.webp",
+        original: "/works/meyseri9.webp",
+      },
 
+      {
+        width: 110,
+        height: 150,
+        src: "/works/meyseri10.webp",
+        original: "/works/meyseri10.webp",
+      }
     ]
   },
   {
