@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import SectionTitle from "../sectionTitle";
 import { worksData } from "./data";
 import { Gallery } from "react-grid-gallery";
@@ -80,10 +81,14 @@ const Refarance = () => {
                     <>
                       <div className="hidden md:grid md:grid-cols-3 md:gap-4 md:mt-6">
                         {galleryImages.map((image, imageIndex) => (
-                          <img
+                          <Image
                             key={`${image.src}-${imageIndex}`}
                             src={image.src}
                             alt={`${work.workName}-${imageIndex}`}
+                            width={900}
+                            height={600}
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            loading="lazy"
                             className="h-[180px] w-full object-cover"
                           />
                         ))}
@@ -91,10 +96,14 @@ const Refarance = () => {
 
                       <div className="md:hidden mt-3 space-y-4">
                         {galleryImages.map((image, imageIndex) => (
-                          <img
+                          <Image
                             key={`${image.src}-${imageIndex}-mobile`}
                             src={image.src}
                             alt={`${work.workName}-${imageIndex}`}
+                            width={900}
+                            height={600}
+                            sizes="100vw"
+                            loading="lazy"
                             className="h-[170px] w-full object-cover"
                           />
                         ))}
@@ -129,9 +138,13 @@ const Refarance = () => {
                         key={curtain.src}
                         className="w-full h-full mb-5"
                       >
-                        <img
+                        <Image
                           src={curtain?.src}
                           alt={"curtain"}
+                          width={1200}
+                          height={900}
+                          sizes="100vw"
+                          loading="lazy"
                           className="object-cover w-full h-full"
                         />
                       </motion.div>

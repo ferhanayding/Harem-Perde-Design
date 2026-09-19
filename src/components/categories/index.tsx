@@ -1,4 +1,5 @@
 import { categories } from "@/dumyData/category";
+import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import SectionTitle from "../sectionTitle";
@@ -36,9 +37,13 @@ const Categories = () => {
              justify-center my-2 relative rounded-lg w-full  md:w-1/3 lg:w-1/4 xl:w-[400px]"
           >
             <div className="overflow-hidden w-full h-[150px]  md:h-[200px] lg:h-[250px] rounded-lg">
-              <img
+              <Image
                 src={category.image}
                 alt={category.name}
+                width={1200}
+                height={900}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                loading="lazy"
                 className="object-cover w-full h-full rounded-lg"
               />
             </div>

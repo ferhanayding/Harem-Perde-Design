@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLinkBase } from "react-scroll";
 import { useTranslation } from "react-i18next";
@@ -15,40 +15,34 @@ const ScrollLink = ScrollLinkBase as unknown as React.ComponentType<{
 
 const Featured = (props: Props) => {
   const { t } = useTranslation("global");
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setShouldLoadVideo(true), 200);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   return (
     <div
       id="home"
       className="relative pattern-soft  text-textPrimary h-screen max-w-[2000px] min-w-full overflow-hidden"
     >
-      {/* DESKTOP VIDEO */}
       <video
-        className="hidden md:block fixed top-0 left-0 w-screen h-screen object-cover"
-        src="/videos/haremsite1.1.mp4"
+        className="fixed top-0 left-0 w-screen h-screen object-cover"
         autoPlay
         loop
         muted
         playsInline
-      />
-
-      {/* MOBILE VIDEO */}
-      <video
-        className="block md:hidden fixed top-0 left-0 w-screen h-screen object-cover"
-        src="/videos/haremsite1-mobile.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-      <video
-        className="block md:hidden fixed top-0 left-0 w-screen h-screen object-cover"
-        src="/videos/haremsite1.1dikey.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-      />
+        preload={shouldLoadVideo ? "metadata" : "none"}
+        poster="/images/gallery/featured.png"
+      >
+        {shouldLoadVideo && (
+          <>
+            <source media="(min-width: 768px)" src="/videos/haremsite1.1-optimized.mp4" type="video/mp4" />
+            <source media="(max-width: 767px)" src="/videos/haremsite1.1dikey-optimized.mp4" type="video/mp4" />
+          </>
+        )}
+      </video>
       {/* ALT DEKOR */}
       <div className="absolute bottom-0 left-0 right-0 w-screen h-3 bg-bgPrimary z-40"></div>
       <div className="absolute bottom-0 left-0 w-[52%] h-5 bg-bgPrimary z-40 rotate-1"></div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import SectionTitle from "../sectionTitle";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -17,10 +18,14 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           className="flex gap-5 font-semibold flex-1 text-2xl"
         >
-          <img
+          <Image
             src="/images/gallery/sağdan.jpeg"
+            alt="Harem Pərdə hakkında görsel"
+            width={1200}
+            height={800}
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="w-full h-full object-cover rounded-lg"
-            alt=""
+            priority
           />
         </motion.div>
         <motion.span

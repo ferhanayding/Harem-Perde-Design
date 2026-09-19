@@ -1,5 +1,6 @@
 import React from "react";
 
+import Image from "next/image";
 import info from "../../dumyData/companies";
 import Head from "next/head";
 import Slider from "react-slick";
@@ -53,11 +54,14 @@ const Info = () => {
                   className="  flex justify-center items-center my-auto pointer-events-none  "
                   key={index}
                 >
-                  <img
+                  <Image
                     src={item.url}
                     className="md:max-w-xl md:max-h-12 max-h-10 max-w-10 mr-11  "
                     alt="photo"
                     key={index}
+                    width={240}
+                    height={60}
+                    loading="lazy"
                   />
                 </div>
               ))}

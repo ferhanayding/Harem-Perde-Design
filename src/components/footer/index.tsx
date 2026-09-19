@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -8,10 +9,13 @@ const Footer = () => {
     <div className="bg-gray-900 relative text-white py-10">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-20">
         <div className="flex items-center gap-4">
-          <img
+          <Image
             src="/logo/mainlogo.png"
             alt="AYTEKS MMC Logo"
-            className="h-24"
+            width={120}
+            height={96}
+            className="h-24 w-auto"
+            loading="lazy"
           />
           <span className="text-2xl font-bold">AYTEKS MMC</span>
         </div>

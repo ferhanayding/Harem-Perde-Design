@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Gallery } from "react-grid-gallery";
 import { motion } from "framer-motion";
 import { curtains } from "./data";
@@ -49,9 +50,13 @@ const MyWorks = (props: Props) => {
             key={curtain.src}
             className="w-full h-full mb-5"
           >
-            <img
+            <Image
               src={curtain?.src}
               alt={"curtain"}
+              width={1200}
+              height={900}
+              sizes="(max-width: 768px) 100vw"
+              loading="lazy"
               className="object-cover w-full h-full"
             />
           </motion.div>

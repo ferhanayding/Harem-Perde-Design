@@ -1,6 +1,7 @@
 'use client'
 
 import React from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { FaWhatsapp, FaInstagram, FaMapMarkerAlt, FaHome } from "react-icons/fa"
 import { useTranslation } from "react-i18next"
@@ -27,10 +28,13 @@ export default function ConnectPage() {
             <div className="w-full max-w-sm p-6 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl">
 
                 <div className=" flex justify-center">
-                    <img
+                    <Image
                         src="/logo/textlogo.png"
                         alt="harem perde logo"
-                        className="w-40 md:w-48 object-contain"
+                        width={180}
+                        height={56}
+                        className="w-40 md:w-48 h-auto object-contain"
+                        priority
                     />
                 </div>
 
