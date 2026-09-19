@@ -21,8 +21,6 @@ const getVideoEmbedUrl = (url?: string) => {
 
 const Refarance = () => {
   const { t } = useTranslation("global");
-  const featureText =
-    "“Meysari Grand Hotel & SPA” kompleksinin açılışında iştirak edən Prezident İlham Əliyevə və birinci xanım Mehriban Əliyevaya təşəkkür edirik. Ölkəmizin turizm və xidmət sektorunun inkişafına töhfə verən uğurlu bir layihə olsun! HAREM PƏRDƏ ailesi olaraq, bu dəyərli layihənin bir hissəsi olduğumuz üçün qürur duyuruq. Dövlət başçımıza və nümayəndə heyətinə təşəkkür edirik. Ölkəmizin turizminə dəyər qatan bu gözəl addımı dəstəkləyirik.”"
   return (
     <div
       id="refarance"
@@ -57,7 +55,7 @@ const Refarance = () => {
                       </div>
 
                       <div className="text-[#1b1b1b] text-sm leading-7 md:text-base">
-                        <p>{featureText}</p>
+                        <p>{t("featureText")}</p>
                       </div>
                     </div>
                   </div>
@@ -73,7 +71,7 @@ const Refarance = () => {
                       />
                     </div>
                     <div className="mb-6 text-[#1b1b1b] text-sm leading-7">
-                      <p>{featureText}</p>
+                      <p>{t("featureText")}</p>
                     </div>
                   </div>
 

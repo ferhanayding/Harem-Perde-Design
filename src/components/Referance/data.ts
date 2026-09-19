@@ -69,6 +69,49 @@ export const worksData = [
     ]
   },
   {
+    workName: "Chenot Hotel | Gabala",
+    photos: [
+      {
+        width: 300,
+        height: 150,
+        src: "/works/work6/Chenot1.webp",
+        original: "/works/work6/Chenot1.webp",
+      },
+      {
+        width: 200,
+        height: 150,
+        src: "/works/work6/Chenot2.jpeg",
+
+        original: "/works/work6/Chenot2.jpeg",
+      },
+      {
+        width: 200,
+        height: 150,
+        src: "/works/work6/Chenot3.jpeg",
+        original: "/works/work6/Chenot3.jpeg",
+      },
+      {
+        width: 200,
+        height: 150,
+        src: "/works/work6/Chenot4.jpeg",
+
+        original: "/works/work6/Chenot4.jpeg",
+      },
+      {
+        width: 200,
+        height: 150,
+        src: "/works/work6/Chenot5.jpeg",
+        original: "/works/work6/Chenot5.jpeg",
+      },
+      {
+        width: 200,
+        height: 150,
+        src: "/works/work6/Chenot6.jpeg",
+        original: "/works/work6/Chenot6.jpeg",
+      }
+    ]
+  },
+  {
     workName: "AĞALI HOTEL | ZENGİLAN",
 
     photos: [
